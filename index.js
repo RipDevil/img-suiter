@@ -45,3 +45,4 @@ fs.readdirSync(root).forEach((file) => {
     });
   }
 });
+console.log('<=== Processing has ended ===>');

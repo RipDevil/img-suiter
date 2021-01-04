@@ -23,19 +23,22 @@ fs.readdirSync(root).forEach((file) => {
           const extName = path.extname(root + file + '/' + p).toLowerCase();
 
           console.log(`${i} --- ${baseName} is being processed...`)
-          if (p.match(/.heic/i)) {
-            const inputBuffer = fs.readFileSync(filePath + extName);
-            const savedIdx = i;
-            convert({
-              buffer: inputBuffer, // the HEIC file buffer
-              format: 'JPEG', // output format
-              quality: 1, // the jpeg compression quality, between 0 and 1
-            }).then((data) => {
-              fs.writeFileSync(copyTo + savedIdx + '.jpg', data);
-            });
-          } else {
-            fs.copyFileSync(filePath + extName, copyTo + i + extName);
-          }
+          fs.copyFileSync(filePath + extName, copyTo + i + extName);
+
+          // TODO: Needs optimisation for .heic -> .jpg convert
+          // if (p.match(/.heic/i)) {
+          //   const inputBuffer = fs.readFileSync(filePath + extName);
+          //   const savedIdx = i;
+          //   convert({
+          //     buffer: inputBuffer, // the HEIC file buffer
+          //     format: 'JPEG', // output format
+          //     quality: 1, // the jpeg compression quality, between 0 and 1
+          //   }).then((data) => {
+          //     fs.writeFileSync(copyTo + savedIdx + '.jpg', data);
+          //   });
+          // } else {
+          //   fs.copyFileSync(filePath + extName, copyTo + i + extName);
+          // }
         }
       } catch (err) {
         console.error(err);

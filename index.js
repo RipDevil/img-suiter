@@ -13,7 +13,8 @@ fs.readdirSync(root).forEach((file) => {
     file !== 'photos' &&
     file !== 'package.json' &&
     file !== 'package-lock.json' &&
-    file !== 'node_modules'
+    file !== 'node_modules' &&
+    file !== '.git'
   ) {
     fs.readdirSync(root + file).forEach(async (p) => {
       try {

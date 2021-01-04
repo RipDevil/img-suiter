@@ -14,7 +14,8 @@ fs.readdirSync(root).forEach((file) => {
     file !== 'package.json' &&
     file !== 'package-lock.json' &&
     file !== 'node_modules' &&
-    file !== '.git'
+    file !== '.git' &&
+    file !== 'index.js'
   ) {
     fs.readdirSync(root + file).forEach(async (p) => {
       try {

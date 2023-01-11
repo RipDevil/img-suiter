@@ -3,9 +3,6 @@
   "scripts": {
     "start": "node ./index"
   },
-  "dependencies": {
-    "heic-convert": "^1.2.4"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/RipDevil/img-suiter.git"

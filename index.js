@@ -18,7 +18,7 @@ const ignore = [
 let i = 1;
 console.log('<=== Processing has started ===>');
 fs.readdirSync(root).forEach((file) => {
-  if (ignore.includes(file)) {
+  if (!ignore.includes(file)) {
     fs.readdirSync(root + file).forEach(async (p) => {
       try {
         if (!p.includes('.zip')) {

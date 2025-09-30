@@ -1,10 +1,10 @@
-# img-suiter (just a convenient app for myself)
+# img-suiter
 
-Moves files in subdirs into a ./photos dir in 1..n arranging
+Сортирует фотографии и сквозно номерует их перекладывая в папку photos.
 
-Also converts .heic files
-
-npm i
-create a photos dir
-place folders in the root
-npm start
+# howto
+- скрипт в папку с фотками;
+- создать папку photos;
+- запустить скрипт;
+- ???;
+- фотографии перекинуты!

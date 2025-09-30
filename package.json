@@ -1,10 +1,6 @@
 {
-  "name": "img-suiter",
-  "scripts": {
-    "start": "node ./index"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/RipDevil/img-suiter.git"
-  }
+    "name": "img-suiter",
+    "type": "module",
+    "main": "src/imgstr.js",
+    "bin": "src/imgstr.js"
 }
